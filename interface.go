@@ -10,7 +10,7 @@ type Decoder[V any] interface {
 	Decode(bs []byte) (v *V, n int, err error)
 }
 
-type Interface[V any] interface {
+type Tap[V any] interface {
 	Encoder[V]
 	Decoder[V]
 	Free(*V)
